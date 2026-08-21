@@ -1,0 +1,4 @@
+Adafruit CircuitPython 10.0.3 on 2025-10-17; Cytron MOTION 2350 Pro with rp2350
+Board ID:cytron_motion_2350_pro
+UID:D95A7FB15F08BD7D
+boot.py output:

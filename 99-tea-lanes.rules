@@ -1,0 +1,17 @@
+# TeaMatrix Core Hardware UDEV Rules
+# Place this file in: /etc/udev/rules.d/
+# After adding or modifying, run: 
+#   sudo udevadm control --reload-rules && sudo udevadm trigger
+#
+# ── How to find your board serial numbers ──
+# 1. Unplug all boards.
+# 2. Plug in Board 1.
+# 3. Run: udevadm info -a -n /dev/ttyACM0 | grep '{serial}'
+#    (Look for the first entry that looks like a clean alphanumeric string or MAC-like format)
+# 4. Replace <SERIAL_1> below with that string.
+# 5. Repeat for Boards 2, 3, and 4.
+
+SUBSYSTEM=="tty", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="8111", ATTRS{serial}=="<SERIAL_1>", SYMLINK+="module_01"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="8111", ATTRS{serial}=="<SERIAL_2>", SYMLINK+="module_02"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="8111", ATTRS{serial}=="<SERIAL_3>", SYMLINK+="module_03"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="239a", ATTRS{idProduct}=="8111", ATTRS{serial}=="<SERIAL_4>", SYMLINK+="module_04"
